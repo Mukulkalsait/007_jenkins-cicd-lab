@@ -10,8 +10,8 @@ services:
       - "8080:8080"
       - "50000:50000" # Y: JavaNetworkLaunchProtocol(JNLP) = jenkins-agent-connection
     volumes:
-      # Y:   hostPath: containerPath
-      - /home/mukuldk/1_file/3_Repos_All/A_gitHub/7_jenkins-cicd-lab/3_Jenkins_data_folder/main:/var/jenkins_home
+      # IMP: hostPath: containerPath | hostpath => managed by podman here as we added <volumes.jenkins_home> billow.
+      - jenkins_home:/var/jenkins_home
     # envirnoment:
     # depends_on:
 
@@ -26,6 +26,7 @@ services:
       - JENKINS_AGENT_NAME=agent1
       - JENKINS_WEB_SOCKET=true
     volumes:
+     # Y:   hostPath: containerPath
       - /home/mukuldk/1_file/3_Repos_All/A_gitHub/7_jenkins-cicd-lab/3_Jenkins_data_folder/agent1/:/home/jenkins/agent
     depends_on:
       - jenkins
@@ -41,6 +42,7 @@ services:
       - JENKINS_AGENT_NAME=agent2
       - JENKINS_WEB_SOCKET=true
     volumes:
+     # Y:   hostPath: containerPath
       - /home/mukuldk/1_file/3_Repos_All/A_gitHub/7_jenkins-cicd-lab/3_Jenkins_data_folder/agent2/:/home/jenkins/agent
     depends_on:
       - jenkins
@@ -48,10 +50,9 @@ services:
 volumes:
   jenkins_home:
 
-  # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  # ================================================================================================================================================================================
 
 
-  # Y: 
   # services:
   #   servcie_name:
   #     image:
