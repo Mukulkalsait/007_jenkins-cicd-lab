@@ -37,7 +37,7 @@ services:
     container_name: jenkins-agent2
     environment:
       - JENKINS_URL=http://jenkins:8080/
-      - JENKINS_SECRET=<SECRET_FROM_AGENT2_NODE>
+      - JENKINS_SECRET=1c593025465cb3113316090d87aa1110540848c4d0e7051390a43e5bbc278624
       # DX: WE NEED DIFFERENT SECRET CODE FOR DIFFERENT NODE.
       - JENKINS_AGENT_NAME=agent2
       - JENKINS_WEB_SOCKET=true
@@ -49,6 +49,10 @@ services:
 
 volumes:
   jenkins_home:
+  # Y: managed by podman => can be used like this ->
+  # podman volume inspect jenkins_home
+  # podman volume export jenkins_home > backup.tar
+
 
   # ================================================================================================================================================================================
 
