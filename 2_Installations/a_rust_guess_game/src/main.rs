@@ -48,13 +48,13 @@ struct RangeOfNumbers {
 // display_range(){}
 // is_within_range(){}
 
-fn match_guess(sec_num: u32, guess: u32) -> GuessResualt {
-    match guess.cmp(&sec_num) {
-        Ordering::Less => GuessResualt::GuessIsSmaller,
-        Ordering::Greater => GuessResualt::GuessIsGreater,
-        Ordering::Equal => GuessResualt::GuessIsEqual,
-    }
-}
+// fn match_guess(sec_num: u32, guess: u32) -> GuessResualt {
+//     match guess.cmp(&sec_num) {
+//         Ordering::Less => GuessResualt::GuessIsSmaller,
+//         Ordering::Greater => GuessResualt::GuessIsGreater,
+//         Ordering::Equal => GuessResualt::GuessIsEqual,
+//     }
+// }
 
 fn game_loop_start() {
     let sec_num = secret_number();
