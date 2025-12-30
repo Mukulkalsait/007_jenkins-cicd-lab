@@ -78,26 +78,32 @@ fn game_loop_start() {
     }
 }
 
-fn smaller_guess(n: u32, range: RangeOfNumbers) {
-    let range = Point { lower_bound: n };
+fn smaller_guess(n: u32, range: &mut Range) {
+    range.lower_bound = n;
     println!(
-        "{}, {}",
+        "{}, {}, {} , {} to {}",
         "Your guess is too small".red(),
-        "Please Input Higher Numbers"
+        "Please Input Higher Numbers",
+        "Updated Range is ",
+        range.lower_bound,
+        range.upper_bound
     );
 }
-fn greater_guess(n: u32, range: RangeOfNumbers) {
-    let range = Point { upper_bound: n };
+fn greater_guess(n: u32, range: &mut Range) {
+    range.upper_bound = n;
     println!(
-        "{}, {}",
+        "{}, {}, {} , {} to {}",
         "Your guess is too big".red(),
-        "Please Input Lower Numbers"
+        "Please Input Lower Numbers",
+        "Updated Range is ",
+        range.lower_bound,
+        range.upper_bound
     );
 }
 
-fn update_after_guess() {}
-fn display_range() {}
-fn is_within_range() {}
+// fn update_after_guess() {}
+// fn display_range() {}
+// fn is_within_range() {}
 
 fn additional_functionality_additioon() {
     println!("{}", "You Won !!! 💛💙🩶🩷🤍💖💛💙🩶🩷🤍💖".green());
