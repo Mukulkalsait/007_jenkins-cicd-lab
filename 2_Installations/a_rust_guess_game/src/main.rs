@@ -1,7 +1,6 @@
 use colored::*;
 use rand::Rng;
-use std::cmp::Ordering;
-use std::io;
+use std::{cmp::Ordering, io};
 
 fn main() {
     println!("|=================== Guseesing Game ==========================|");
@@ -14,6 +13,8 @@ fn secret_number() -> u32 {
     // RNG changes its internel state every time its called.
     let mut rng = rand::rng();
     rng.random_range(1..=1000)
+    // Y: in this function we are returning only and only u32 value for that value to return
+    // we are not even adding variable.
 }
 
 fn guess_input() -> String {
@@ -44,17 +45,17 @@ struct RangeOfNumbers {
     upper_bound: u32,
 }
 
-// update_after_guess(){}
-// display_range(){}
-// is_within_range(){}
+fn update_after_guess() {}
+fn display_range() {}
+fn is_within_range() {}
 
-// fn match_guess(sec_num: u32, guess: u32) -> GuessResualt {
-//     match guess.cmp(&sec_num) {
-//         Ordering::Less => GuessResualt::GuessIsSmaller,
-//         Ordering::Greater => GuessResualt::GuessIsGreater,
-//         Ordering::Equal => GuessResualt::GuessIsEqual,
-//     }
-// }
+fn match_guess(sec_num: u32, guess: u32) -> GuessResualt {
+    match guess.cmp(&sec_num) {
+        Ordering::Less => GuessResualt::GuessIsSmaller,
+        Ordering::Greater => GuessResualt::GuessIsGreater,
+        Ordering::Equal => GuessResualt::GuessIsEqual,
+    }
+}
 
 fn game_loop_start() {
     let sec_num = secret_number();
