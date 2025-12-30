@@ -1,9 +1,7 @@
     Blocking waiting for file lock on package cache
     Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on shared package cache
-   0.026095290s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint: fingerprint error for a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game)/Check { test: false }/TargetInner { name: "a_rust_guess_game", doc: true, ..: with_path("/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game/src/main.rs", Edition2024) }
-   0.026112651s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/mukuldk/.cargo/target/debug/.fingerprint/a_rust_guess_game-17b197ab7136c262/bin-a_rust_guess_game`
+   0.024979826s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint: fingerprint error for a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game)/Check { test: false }/TargetInner { name: "a_rust_guess_game", doc: true, ..: with_path("/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game/src/main.rs", Edition2024) }
+   0.024991354s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/mukuldk/.cargo/target/debug/.fingerprint/a_rust_guess_game-17b197ab7136c262/bin-a_rust_guess_game`
 
 Caused by:
     No such file or directory (os error 2)
@@ -45,8 +43,8 @@ Stack backtrace:
   24: __libc_start_call_main
   25: __libc_start_main_alias_1
   26: <unknown>
-   0.034206792s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint: fingerprint error for a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game)/Check { test: true }/TargetInner { name: "a_rust_guess_game", doc: true, ..: with_path("/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game/src/main.rs", Edition2024) }
-   0.034219790s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/mukuldk/.cargo/target/debug/.fingerprint/a_rust_guess_game-0ccd536759deadbe/test-bin-a_rust_guess_game`
+   0.031186101s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint: fingerprint error for a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game)/Check { test: true }/TargetInner { name: "a_rust_guess_game", doc: true, ..: with_path("/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game/src/main.rs", Edition2024) }
+   0.031198346s  INFO prepare_target{force=false package_id=a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game) target="a_rust_guess_game"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/mukuldk/.cargo/target/debug/.fingerprint/a_rust_guess_game-0ccd536759deadbe/test-bin-a_rust_guess_game`
 
 Caused by:
     No such file or directory (os error 2)
@@ -89,6 +87,6 @@ Stack backtrace:
   25: __libc_start_main_alias_1
   26: <unknown>
     Checking a_rust_guess_game v0.1.0 (/home/mukuldk/1_file/3_Repos_All/A_gitHub/007_Jenkins-cicd-lab/2_Installations/a_rust_guess_game)
-error: could not compile `a_rust_guess_game` (bin "a_rust_guess_game" test) due to 4 previous errors; 1 warning emitted
+error: could not compile `a_rust_guess_game` (bin "a_rust_guess_game") due to 6 previous errors; 1 warning emitted
 warning: build failed, waiting for other jobs to finish...
-error: could not compile `a_rust_guess_game` (bin "a_rust_guess_game") due to 4 previous errors; 1 warning emitted
+error: could not compile `a_rust_guess_game` (bin "a_rust_guess_game" test) due to 6 previous errors; 1 warning emitted
