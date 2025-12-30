@@ -46,19 +46,15 @@ fn match_guess(sec_num: u32, guess: u32) -> GuessResualt {
     }
 }
 
-// Y: work on this part now
-struct RangeOfNumbers {
+#[derive(Debug)] // Without this {:?} will not work in struct.
+struct Range {
     lower_bound: u32,
     upper_bound: u32,
 }
 
-fn update_after_guess() {}
-fn display_range() {}
-fn is_within_range() {}
-
 fn game_loop_start() {
     let sec_num = secret_number();
-    let range: RangeOfNumbers = RangeOfNumbers {
+    let mut range_of_numbers: Range = Range {
         lower_bound: 1,
         upper_bound: 1000,
     }; // Y : Decleared : range -> we will lower it for more accurate op.
@@ -70,12 +66,10 @@ fn game_loop_start() {
             println!("🚫 Only Numbers between 1-1000 are allowed !!!");
             continue;
         }
-        RangeOfNumbers.lower_bound = 1;
-        RangeOfNumbers.upper_bound = 1000;
 
         match match_guess(sec_num, guess_num) {
-            GuessResualt::GuessIsSmaller => smaller_guess(guess_num, &mut RangeOfNumbers),
-            GuessResualt::GuessIsGreater => greater_guess(guess_num, &mut RangeOfNumbers),
+            GuessResualt::GuessIsSmaller => smaller_guess(guess_num, &mut range_of_numbers),
+            GuessResualt::GuessIsGreater => greater_guess(guess_num, &mut range_of_numbers),
             GuessResualt::GuessIsEqual => {
                 additional_functionality_additioon();
                 break;
@@ -100,6 +94,10 @@ fn greater_guess(n: u32, range: RangeOfNumbers) {
         "Please Input Lower Numbers"
     );
 }
+
+fn update_after_guess() {}
+fn display_range() {}
+fn is_within_range() {}
 
 fn additional_functionality_additioon() {
     println!("{}", "You Won !!! 💛💙🩶🩷🤍💖💛💙🩶🩷🤍💖".green());
