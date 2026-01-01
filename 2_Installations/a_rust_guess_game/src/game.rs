@@ -9,9 +9,13 @@ pub fn set_dificulty() {
         "'Easy'".green(),
         "'Hard'".red()
     );
+    let level: logic::Dificulty;
+
+    let level = input::read_dificulty();
 }
 
 pub fn start() {
+    set_dificulty();
     let secret = random::get_secret();
     loop {
         let guess = input::read_new_guess();
